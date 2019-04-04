@@ -77,52 +77,66 @@ class Landing extends Component {
           </div>
         </div>
 
-        <div className="p-2">
-          <div className="row">
-            <div className="col ">
-              <div className="container pt-5 ">
-                <div className="d-flex flex-column">
-                  <h1>Are You Ready To Get Started?</h1>
-                  <p className="">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Est eaque magni sit dolores. Nisi, dolor nam modi
-                    perspiciatis consequatur soluta.
-                  </p>
+        <div className="container">
+          <div className="my-5 row">
+            <div className="col-3" />
+            <CSSTransitionGroup
+              transitionName="fade"
+              transitionEnterTimeout={600}
+              transitionLeaveTimeout={500}
+              transitionAppear
+              transitionAppearTimeout={500}
+              className="col d-flex flex-column"
+            >
+              <Card cards={this.cards} />
+            </CSSTransitionGroup>
+          </div>
+        </div>
+
+        {/**check list head */}
+        <section id="create-head-section" className="bg-info text-white">
+          <div className="container text-center">
+            <div className="row">
+              <div className="col text-center">
+                <div className="container p-3">
+                  <div className="d-flex flex-column">
+                    <h1>Are You Ready To Get Started?</h1>
+                  </div>
 
                   {/* Square check list*/}
-                  <div className="d-flex">
-                    <div className="p-4 align-self-center">
-                      <i className="fas fa-check fa-2x" />
+                  <div id="ready-section ">
+                    <div className="d-flex flex-row justify-content-center">
+                      <div className="p-4 align-self-center">
+                        <i className="fas fa-check fa-2x" />
+                      </div>
+                      <div className="p-4 align-self-end lead">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing
+                      </div>
                     </div>
-                    <div className="p-4 align-self-end lead">
-                      Lorem ipsum dolor sit, amet consectetur adipisicing
-                    </div>
-                  </div>
 
-                  <div className="d-flex">
-                    <div className="p-4 align-self-center">
-                      <i className="fas fa-check fa-2x " />
+                    <div className="d-flex  flex-row justify-content-center">
+                      <div className="p-4 align-self-center">
+                        <i className="fas fa-check fa-2x " />
+                      </div>
+                      <div className="p-4 align-self-end lead">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing
+                      </div>
                     </div>
-                    <div className="p-4 align-self-end lead">
-                      Lorem ipsum dolor sit, amet consectetur adipisicing
-                    </div>
-                  </div>
 
-                  <div className="d-flex">
-                    <div className="p-4 align-self-center">
-                      <i className="fas fa-check fa-2x" />
-                    </div>
-                    <div className="p-4 align-self-end lead">
-                      Lorem ipsum dolor sit, amet consectetur adipisicing
+                    <div className="d-flex  flex-row justify-content-center">
+                      <div className="p-4 align-self-center">
+                        <i className="fas fa-check fa-2x" />
+                      </div>
+                      <div className="p-4 align-self-end lead">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-
-        <Card cards={this.cards} />
+        </section>
       </React.Fragment>
     );
   }

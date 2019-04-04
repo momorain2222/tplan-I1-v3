@@ -84,6 +84,12 @@ img {
   height: 100%;
 }
 
+#ready-section .fas {
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+}
+
 .display-5 {
   font-size: 25px !important;
 }
@@ -326,4 +332,28 @@ img {
 .flyIn-appear .flyIn-appear-active {
   opacity: 1;
   transition: opacity 0.5s ease-in;
+}
+
+.showIn-enter {
+  opacity: 0.01;
+}
+
+.showIn-enter.showIn-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.showIn-leave {
+  opacity: 1;
+}
+
+.showIn-leave.showIn-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
+
+.conorIcon {
+  position: relative;
+  margin-left: -5%;
+  color: rgba(79, 89, 100, 1);
 }
