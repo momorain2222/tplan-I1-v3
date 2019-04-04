@@ -1,0 +1,304 @@
+img {
+  width: 100%;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.content {
+  min-height: 100%;
+}
+
+/* home component css*/
+.home-inner {
+  padding-top: 100px;
+  min-height: 100%;
+  padding-bottom: 50px;
+}
+
+#home-section {
+  background: url(./img/indexbg_youth.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 500px;
+}
+
+#home-section .dark-overlay1 {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  min-height: 550px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+#home-section .home-inner {
+  padding-top: 100px;
+}
+
+#home-section .fas,
+#create-section .fas {
+  color: #69d4e2;
+  background: #fff;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#home-section .card-form {
+  opacity: 0.9;
+}
+
+/* Nav bar css*/
+.navbar {
+  border-bottom: #69d4e2 3px solid;
+  opacity: 0.9;
+}
+
+/* landing component css*/
+.landing {
+  position: relative;
+  background: url("./img/indexbg_youth.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+}
+
+.landing-inner {
+  padding-top: 70px;
+  padding-bottom: 50px;
+}
+
+.dark-overlay {
+  background-color: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.display-5 {
+  font-size: 25px !important;
+}
+
+#mainTitle {
+  margin-top: 60px;
+}
+
+.latest-profiles-img {
+  width: 40px;
+  height: 40px;
+}
+
+.form-control::placeholder {
+  color: #bbb !important;
+}
+
+/* Rouadmap Card css*/
+#exploreCard .card:hover {
+  padding: 1px;
+  box-shadow: 5px 4px rgb(0, 0, 0, 0.1);
+}
+
+.fab {
+  color: #69d4e2;
+}
+
+.alpha {
+  color: cyan;
+}
+
+.beta {
+  color: color("cyan");
+}
+
+/* Footer component css*/
+#footer {
+  height: 60px;
+  margin-top: -50px;
+  width: 100%;
+}
+
+/* Quiz Home component css*/
+
+#quiz-section {
+  background: url(./img/indexbg_youth.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 300px;
+}
+
+#quiz-banner {
+  height: 300px;
+  opacity: 0.9;
+}
+
+/*bootstrap button customized*/
+.btn-info {
+  color: #fff !important;
+  font-size: 15px;
+  color: rgba(91, 192, 222, 0.75);
+  border: 2px solid rgba(91, 192, 222, 0.75) !important;
+  letter-spacing: 1px;
+  line-height: 15px;
+  border-radius: 35px !important;
+  background: transparent;
+  transition: all 0.3s ease 0s;
+}
+
+.btn-info:hover {
+  color: #fff;
+  background: #efbd2e !important;
+  border: 2px solid #efbd2e !important;
+}
+
+/* Customized Selected */
+#quiz_selector {
+  font-size: 15px !important;
+  border: 2px solid rgba(91, 192, 222, 1) !important;
+  border-radius: 35px !important;
+  background: transparent !important;
+  transition: all 0.3s ease 0s;
+}
+
+/* Start Quiz CSS*/
+#quiz-start-top {
+  background: rgba(32, 151, 204, 1);
+  height: 500px;
+  color: white;
+  width: 100%;
+  background-size: cover;
+}
+
+#quiz-start-inner {
+  padding-top: 55px;
+}
+
+#quiz-start-bottom {
+  background: #efbd2e;
+  width: 100%;
+  height: 90vh;
+}
+
+#quiz-choices {
+  position: absolute;
+  margin-top: 100px;
+}
+
+.btn-black {
+  color: #fff !important;
+  font-size: 29px !important;
+  letter-spacing: 1px;
+  line-height: 15px;
+  background: rgba(51, 40, 68, 1) !important;
+  border-radius: 35px !important;
+  background: transparent;
+  transition: all 0.3s ease 0s;
+}
+
+.btn-black:hover {
+  color: #fff;
+  background: rgba(79, 89, 100, 1) !important;
+  border: 2px solid rgba(79, 89, 100, 1) !important;
+}
+
+.btn-black:focus {
+  color: #fff;
+  background: rgba(0, 0, 0, 1) !important;
+  border: 2px solid rgba(0, 0, 0, 1) !important;
+}
+
+/* correct and right answer css*/
+.fontGreen {
+  color: rgba(32, 151, 131, 1) !important;
+}
+
+.fontRed {
+  color: rgba(213, 58, 66, 1) !important;
+}
+
+.fontWhite {
+  color: rgba(255, 255, 255, 1) !important;
+}
+
+/* Result checkbox*/
+.checkBoxColor {
+  background: #8bc53f;
+  border-color: #8bc53f;
+}
+
+/* CSs transition */
+/* Animation */
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 0.5s linear 0.3s;
+}
+
+.fade-leave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 1;
+}
+
+.fade-leave.fade-leave-active {
+  opacity: 0;
+  transition: opacity 0.5s linear;
+}
+
+.fade-appear {
+  opacity: 0;
+}
+
+.fade-appear.fade-appear-active {
+  opacity: 1;
+  transition: opacity 0.5s linear;
+}
+
+.AppearTransition-appear {
+  opacity: 0.01;
+  transform: translateY(80px);
+}
+
+.AppearTransition-appear .AppearTransition-appear-active {
+  opacity: 1;
+  transform: translate(0px);
+  transform: all 1s ease-out;
+}
+
+.flyIn-enter {
+  opacity: 0;
+}
+
+.flyIn-enter.flyIn-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.flyIn-leave {
+  opacity: 1;
+}
+
+.flyIn-leave.flyIn-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-out;
+}
+
+.flyIn-appear {
+  opacity: 0.01;
+}
+
+.flyIn-appear .flyIn-appear-active {
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+}
