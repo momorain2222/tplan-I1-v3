@@ -2,12 +2,6 @@ img {
   width: 100%;
 }
 
-html,
-body {
-  height: 100%;
-  margin: 0;
-}
-
 .content {
   min-height: 100%;
 }
@@ -49,13 +43,17 @@ body {
 }
 
 #home-section .card-form {
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 /* Nav bar css*/
 .navbar {
   border-bottom: #69d4e2 3px solid;
-  opacity: 0.9;
+  opacity: 0.96;
+}
+
+.navTitle {
+  font-size: 15px !important;
 }
 
 /* landing component css*/
@@ -64,11 +62,11 @@ body {
   background: url("./img/indexbg_youth.jpg") no-repeat;
   background-size: cover;
   background-position: center;
-  height: 90vh;
+  height: 85vh;
 }
 
 .landing-inner {
-  padding-top: 70px;
+  padding-top: 50px;
   padding-bottom: 50px;
 }
 
@@ -105,11 +103,11 @@ body {
 }
 
 .fab {
-  color: #69d4e2;
+  color: rgba(91, 192, 222, 0.75);
 }
 
 .alpha {
-  color: cyan;
+  color: rgb(0, 217, 255);
 }
 
 .beta {
@@ -119,7 +117,7 @@ body {
 /* Footer component css*/
 #footer {
   height: 60px;
-  margin-top: -50px;
+  margin-top: -100px;
   width: 100%;
 }
 
