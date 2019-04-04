@@ -63,7 +63,6 @@ class Home extends Component {
         </div>
 
         {/* RoadMap Card groups */}
-
         <div className="container mt-5 ">
           <div className="row d-flex">
             <CSSTransitionGroup
