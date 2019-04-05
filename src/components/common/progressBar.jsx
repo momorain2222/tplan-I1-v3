@@ -5,12 +5,11 @@ import QuestionCount from "../RightsQuiz/questionCount";
 const ProgressBar = ({ current, total }) => (
   <Progress
     value={current}
-    className="active"
     warning
     total={total}
     progress="ratio"
     label="1"
-    active
+    active={true}
   />
 );
 

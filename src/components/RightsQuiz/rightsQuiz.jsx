@@ -95,13 +95,14 @@ class RightsQuiz extends React.Component {
                       {" "}
                       <h3 className="text-info">Choose your age group </h3>
                     </div>
-
-                    <DropdownSelect
-                      options={categories}
-                      onChnage={this.handleChange}
-                      error={this.state.error}
-                      placeholder={"Please chooose your age group"}
-                    />
+                    <div className="required field">
+                      <DropdownSelect
+                        options={categories}
+                        onChnage={this.handleChange}
+                        error={this.state.error}
+                        placeholder={"Please chooose your age group"}
+                      />
+                    </div>
                   </div>
 
                   {/*start button */}
