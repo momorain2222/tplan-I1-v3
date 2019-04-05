@@ -6,23 +6,25 @@ export default class DropdownSelect extends Component {
 
   handleChange = (e, { value }) => {
     this.setState({ value });
+    //  this.setState({ error: false });
     this.props.onChnage(value);
   };
 
   render() {
     const { value } = this.state;
-    const { options } = this.props;
+    const { options, placeholder, error } = this.props;
     return (
       <Grid columns={1}>
         <Grid.Column>
           <Dropdown
             onChange={this.handleChange}
             options={options}
-            placeholder="Choose an option"
+            placeholder={placeholder}
             selection
             value={value}
             active
             fluid
+            error={error}
           />
         </Grid.Column>
       </Grid>

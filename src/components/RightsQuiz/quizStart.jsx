@@ -103,13 +103,6 @@ class QuizStart extends Component {
     return (
       <div className="row">
         <div className="col-12">
-          <QuestionCount
-            counter={currentIndex + 1}
-            total={this.state.quizData.length}
-          />
-        </div>
-
-        <div className="col-12">
           <QuizSingle
             question={this.state.questionContent}
             choices={this.state.choices}
@@ -121,15 +114,6 @@ class QuizStart extends Component {
           />
         </div>
       </div>
-    );
-  }
-
-  renderProgressBar() {
-    return (
-      <ProgressBar
-        current={this.state.currentIndex + 1}
-        total={this.state.quizData.length}
-      />
     );
   }
 
@@ -170,19 +154,26 @@ class QuizStart extends Component {
           <div className="container">
             <div className="row" id="quiz-start-inner">
               <div className="col-md-12">
-                <ProgressBar
-                  current={this.state.currentIndex + 1}
-                  total={this.state.quizData.length}
-                />
                 {/**question and answer block */}
                 <div className="d-flex p-1 flex-column justify-content-center ">
-                  <div id="question" className="text-center">
+                  <div id="question" className="m-5 text-center">
                     {/** Question / result block */}
                     {this.state.result.length ===
                     this.state.quizData.length ? null : (
-                      <h1 style={{ marginTop: 10 }}>
-                        Question <span>{this.state.currentQuestion._id}</span>
-                      </h1>
+                      <div className="text-center">
+                        <h1 style={{ marginTop: 10 }}>
+                          Question <span>{this.state.currentIndex + 1}</span>
+                        </h1>
+
+                        <div className="col-12 text-left">
+                          <div>
+                            <QuestionCount
+                              counter={this.state.currentIndex + 1}
+                              total={this.state.quizData.length}
+                            />
+                          </div>
+                        </div>
+                      </div>
                     )}
 
                     {this.state.result.length !== this.state.quizData.length

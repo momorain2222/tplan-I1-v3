@@ -29,7 +29,7 @@ const QuizStart = ({ result, programs, history }) => {
               <button
                 type="button"
                 className="btn btn-info col-6-sm mt-5"
-                style={{ height: 80 }}
+                style={{ width: 250, height: 70 }}
                 onClick={() => history.replace("/rightsQuiz")}
               >
                 <div className="d-flex flex-row p-2 justify-content-between">

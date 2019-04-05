@@ -232,6 +232,10 @@ img {
   opacity: 0.9;
 }
 
+#quiz-main-content {
+  margin-bottom: 100px;
+}
+
 /*bootstrap button customized*/
 .btn-info {
   color: #fff !important;
@@ -276,12 +280,21 @@ img {
 #quiz-start-bottom {
   background: #efbd2e;
   width: 100%;
-  height: 90vh;
+  height: 80vh;
+}
+
+#quiz-bottom-section {
+  width: 100%;
+  height: 15vh;
 }
 
 #quiz-choices {
   position: absolute;
   margin-top: 100px;
+}
+
+#quizStartBtn {
+  font-size: 15px !important;
 }
 
 .btn-black {

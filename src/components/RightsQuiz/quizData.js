@@ -2,7 +2,7 @@ const questions = [
   {
     _id: 1,
     ageGroup: [1, 2, 3, 4],
-    questionContent: `Are you OOHC`,
+    questionContent: `Are you currently under or left OOHC ?`,
     //fact: `The couch started in April of 2017, but a partnership agreement wasn't technically signed until May`,
     choices: [
       {
@@ -21,7 +21,7 @@ const questions = [
   {
     _id: 2,
     ageGroup: [1, 2, 3, 4],
-    questionContent: `Are you married`,
+    questionContent: `Are you single ? `,
     //fact: `The Wing was the project that allowed us to kick things into gear, once we solidifed a few more projects we went all in and commited to The Couch.`,
     choices: [
       {
@@ -39,7 +39,7 @@ const questions = [
   {
     _id: 3,
     ageGroup: [1, 2, 3, 4],
-    questionContent: `Do you have children`,
+    questionContent: `Are you an Australian citizen or a PR holder?`,
     //fact: `The Couch is currently entirely referral based. Which is great because we don't have time to chase down leads we're busy making the internet ;)`,
     choices: [
       {
@@ -57,7 +57,7 @@ const questions = [
   {
     _id: 4,
     ageGroup: [1, 2, 3, 4],
-    questionContent: `Are you PR / Citizen`,
+    questionContent: `Do you have any legal issues?`,
     //fact: `The Couch is currently entirely referral based. Which is great because we don't have time to chase down leads we're busy making the internet ;)`,
     choices: [
       {
@@ -75,7 +75,7 @@ const questions = [
   {
     _id: 5,
     ageGroup: [1, 2, 3, 4],
-    questionContent: `Do you have leagal issue`,
+    questionContent: `Is your income less than $ 51k?`,
     //fact: `The Couch is currently entirely referral based. Which is great because we don't have time to chase down leads we're busy making the internet ;)`,
     choices: [
       {
@@ -93,25 +93,25 @@ const questions = [
   {
     _id: 6,
     ageGroup: [1, 2, 3, 4],
-    questionContent: `Are you living with parents`,
+    questionContent: `Are you part of NDIS?`,
     //fact: `The Couch is currently entirely referral based. Which is great because we don't have time to chase down leads we're busy making the internet ;)`,
     choices: [
       {
         id: Math.random(),
         item: "Yes",
-        answer: [6, 1]
+        answer: [6, 0]
       },
       {
         id: Math.random(),
         item: "No",
-        answer: [6, 0]
+        answer: [6, 1]
       }
     ]
   },
   {
     _id: 7,
-    ageGroup: [1, 2, 3, 4],
-    questionContent: `Is your income less than $51K `,
+    ageGroup: [3, 4],
+    questionContent: `Are you currently unemployed?`,
     //fact: `The Couch is currently entirely referral based. Which is great because we don't have time to chase down leads we're busy making the internet ;)`,
     choices: [
       {
@@ -129,7 +129,7 @@ const questions = [
   {
     _id: 8,
     ageGroup: [1, 2, 3, 4],
-    questionContent: `Have you got the NDIS scheme`,
+    questionContent: `Are you physically disabled, ill or injured?`,
     //fact: `The Couch is currently entirely referral based. Which is great because we don't have time to chase down leads we're busy making the internet ;)`,
     choices: [
       {
@@ -146,8 +146,8 @@ const questions = [
   },
   {
     _id: 9,
-    ageGroup: [3, 4],
-    questionContent: `Are you currently employed`,
+    ageGroup: [1, 2, 3, 4],
+    questionContent: `Are you an Aboriginal or Torres Strait Islander Australian?`,
     //fact: `The Couch is currently entirely referral based. Which is great because we don't have time to chase down leads we're busy making the internet ;)`,
     choices: [
       {
@@ -165,7 +165,7 @@ const questions = [
   {
     _id: 10,
     ageGroup: [1, 2, 3, 4],
-    questionContent: `Are you disabled?`,
+    questionContent: `Are you currently studying full time or doing an Australian Apprenticeship?`,
     //fact: `The Couch is currently entirely referral based. Which is great because we don't have time to chase down leads we're busy making the internet ;)`,
     choices: [
       {
@@ -183,54 +183,18 @@ const questions = [
   {
     _id: 11,
     ageGroup: [1, 2, 3, 4],
-    questionContent: `Do you belong to Aboriginal community?`,
-    //fact: `The Couch is currently entirely referral based. Which is great because we don't have time to chase down leads we're busy making the internet ;)`,
-    choices: [
-      {
-        id: Math.random(),
-        item: "Yes",
-        answer: [11, 1]
-      },
-      {
-        id: Math.random(),
-        item: "No",
-        answer: [11, 0]
-      }
-    ]
-  },
-  {
-    _id: 12,
-    ageGroup: [1, 2, 3, 4],
-    questionContent: `Are you currently under any government app ?`,
-    //fact: `The Couch is currently entirely referral based. Which is great because we don't have time to chase down leads we're busy making the internet ;)`,
-    choices: [
-      {
-        id: Math.random(),
-        item: "Yes",
-        answer: [12, 1]
-      },
-      {
-        id: Math.random(),
-        item: "No",
-        answer: [12, 0]
-      }
-    ]
-  },
-  {
-    _id: 13,
-    ageGroup: [1, 2, 3, 4],
     questionContent: `Are you getting another payment to study or train?`,
     //fact: `The Couch is currently entirely referral based. Which is great because we don't have time to chase down leads we're busy making the internet ;)`,
     choices: [
       {
         id: Math.random(),
         item: "Yes",
-        answer: [13, 0]
+        answer: [11, 0]
       },
       {
         id: Math.random(),
         item: "No",
-        answer: [13, 1]
+        answer: [11, 1]
       }
     ]
   }
