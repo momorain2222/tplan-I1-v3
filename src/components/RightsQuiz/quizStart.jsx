@@ -24,26 +24,29 @@ class QuizStart extends Component {
 
   //get all the question and results data, bug here , if there is no question existed
   componentDidMount() {
-    const { history } = this.props;
+    const selectedId = this.props.match.params.selectItemId;
+    console.log(selectedId);
     //get question data
-    const quizData = getQuestions();
+    const quizData = getQuestions(selectedId);
     console.log(quizData);
 
-    const currentQuestion = quizData[0];
-    const choices = currentQuestion.choices;
-    const questionContent = currentQuestion.questionContent;
+    if (quizData.length !== 0) {
+      const currentQuestion = quizData[0];
+      const choices = currentQuestion.choices;
+      const questionContent = currentQuestion.questionContent;
 
-    //get program result data
-    const programs = getPrograms();
-    console.log(programs);
+      //get program result data
+      const programs = getPrograms();
+      console.log(programs);
 
-    this.setState({
-      quizData,
-      currentQuestion,
-      choices,
-      questionContent,
-      programs
-    });
+      this.setState({
+        quizData,
+        currentQuestion,
+        choices,
+        questionContent,
+        programs
+      });
+    }
   }
 
   //nextStep() : go to next question, update currentIndex and currentQuestion
@@ -61,14 +64,10 @@ class QuizStart extends Component {
 
   //control to show the next question until finishing
   setNextQuestion(index) {
-    //\if (this.state.currentIndex + 1 < this.state.quizData.length) {
-    //const nextIndex = this.state.currentIndex + 1;
     const currentQuestion = this.state.quizData[index];
-    //const currentQuestion = this.state.quizData[this.state.currentIndex];
     const choices = currentQuestion.choices;
     const questionContent = currentQuestion.questionContent;
     this.setState({
-      //currentIndex: nextIndex,
       currentQuestion,
       choices,
       questionContent
@@ -90,17 +89,6 @@ class QuizStart extends Component {
     //3. update the programs
     this.setState({ programs });
   }
-
-  //push the answer into the results
-  /*  handleAnswer = newResult => {
-    console.log("handleAnswer called, result updated", newResult);
-    this.setState({ result: newResult });
-    /* 
-    if (this.state.currentIndex + 1 === this.state.quizData.length) {
-      console.log("length === maximum");
-      this.setCheckResults(this.state.result);
-    } 
-}; */
 
   //return the final result of the questions
   getResults() {
@@ -171,6 +159,9 @@ class QuizStart extends Component {
   render() {
     //count the total number of questions
     const { length: total } = this.state.quizData;
+
+    if (total === 0)
+      return <h1>There are no questions available in the database.</h1>;
 
     console.log("questions length: ", total);
     return (

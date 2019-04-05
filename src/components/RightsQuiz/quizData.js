@@ -236,6 +236,13 @@ const questions = [
   }
 ];
 
-export function getQuestions() {
-  return questions;
+export function getQuestions(categoryId) {
+  const filteredQuestion = questions.filter(question => {
+    console.log(typeof categoryId);
+    return question.ageGroup.includes(Number(categoryId));
+  });
+
+  console.log(filteredQuestion);
+  console.log("filtered questions is ", filteredQuestion);
+  return filteredQuestion;
 }
