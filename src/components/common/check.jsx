@@ -6,12 +6,13 @@ const Check = ({ isChecked }) => {
 
   return (
     <i
+      id="checkBox"
       className={cx({
         "text-center": true,
         "p-3": true,
-        "far fa-2x": true,
-        "fa-check-circle": isChecked,
-        "fa-circle": !isChecked
+        "fa-2x": true,
+        "fa fa-check-circle": isChecked,
+        "far fa-circle": !isChecked
       })}
     />
   );

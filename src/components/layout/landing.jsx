@@ -3,6 +3,7 @@ import { CSSTransitionGroup } from "react-transition-group";
 import Banner from "../common/banner";
 import Card from "../common/card";
 import QuickLink from "./quickLink";
+import MainFooter from "./mainFooter";
 
 class Landing extends Component {
   imgIds = [1, 2, 3];
@@ -214,15 +215,7 @@ class Landing extends Component {
         </section>
 
         {/**quick Link */}
-        <section id="quickLink-section">
-          <div className="container">
-            <QuickLink
-              title="Quick Link Example"
-              links={this.links}
-              className="text-white"
-            />
-          </div>
-        </section>
+        <MainFooter />
       </React.Fragment>
     );
   }

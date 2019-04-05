@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { getCategories } from "./quizCategory";
 import DropdownSelect from "../common/dropDown";
-import { Message } from "semantic-ui-react";
+import Footer from "../layout/footer";
 
 class RightsQuiz extends React.Component {
   state = {
@@ -122,7 +122,8 @@ class RightsQuiz extends React.Component {
             </div>
           </div>
         </div>
-        <div id="quiz-bottom-section" />
+        <div id="fixed-bottom-block" />
+        <Footer />
       </React.Fragment>
     );
   }
