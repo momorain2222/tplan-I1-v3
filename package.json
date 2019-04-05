@@ -11,7 +11,9 @@
     "react-scripts": "2.1.8",
     "react-strider": "^1.0.0",
     "react-transition-group": "^1.2.1",
-    "semantic-ui-react": "^0.86.0"
+    "semantic-ui-react": "^0.86.0",
+    "tableau-api": "^2.2.2",
+    "tableau-react": "^1.2.0"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -35,7 +35,7 @@ class NavBar extends Component {
                 </div>
               </NavLink>
 
-              <NavLink className="nav-link nav-item" to="/occupations">
+              <NavLink className="nav-link nav-item" to="/occupation">
                 <div className="text-center">
                   <p className="navTitle">Occupations </p>
                 </div>

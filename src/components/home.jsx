@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { CSSTransitionGroup, Transition } from "react-transition-group";
-import Stepper from "./common/step";
 
 class Home extends Component {
   state = {};

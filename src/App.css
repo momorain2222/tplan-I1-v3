@@ -409,3 +409,21 @@ h1.spacing.spaced {
   opacity: 1;
   letter-spacing: 10px;
 }
+
+/* Occupation */
+.occupation-inner {
+  margin-top: 50px;
+}
+
+/* tableau for occupation */
+#viz1554445704733 {
+  position: relative;
+}
+
+#viz1554445704733 img {
+  border: none;
+}
+
+.tableauViz {
+  display: none;
+}
