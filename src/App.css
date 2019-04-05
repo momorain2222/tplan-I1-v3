@@ -84,8 +84,23 @@ img {
   height: 100%;
 }
 
+/**middle banner section*/
+#middleBanner {
+  position: relative;
+  min-height: 120px;
+  background: url("./img/image-3.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+  background-position: center;
+  margin-bottom: 50px;
+  margin-top: 50px；;
+}
+
 .blue-overlay {
-  background-color: rgba(91, 192, 222, 0.7) !important;
+  background-color: rgba(239, 189, 46, 0.2) !important;
   position: absolute;
   top: 0;
   left: 0;
@@ -94,29 +109,30 @@ img {
   margin-top: 0px;
 }
 
-#middleBanner {
+/**quick link section*/
+#quickLink-section {
+  background-color: rgba(91, 192, 222, 1) !important;
   position: relative;
-  min-height: 200px;
-  background: url("./img/image-3.jpg");
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: 0 -300px;
-  text-align: center;
-  color: #fff;
-  margin-bottom: 50px;
-  margin-top: 50px;
+  color: white;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin-top: 0px;
 }
 
 #create-head-section {
   margin: 50px;
 }
 
+/* Landing - check list section*/
 #ready-section .fas {
   color: #fff;
   padding: 5px;
   border-radius: 5px;
 }
 
+/* landing - planning section */
 #planner-section {
   margin-top: 50px;
   margin-bottom: 50px;
@@ -136,6 +152,11 @@ img {
   font-size: 18px !important;
 }
 
+.display-7 {
+  font-size: 17px !important;
+}
+
+/* Landing : main banner data*/
 #homeTitle {
   margin-top: 60px;
 }
@@ -226,8 +247,8 @@ img {
 
 .btn-info:hover {
   color: #fff;
-  background: #efbd2e !important;
-  border: 2px solid #efbd2e !important;
+  background: rgba(239, 189, 46, 1) !important;
+  border: 2px solid rgba(239, 189, 46, 1) !important;
 }
 
 /* Customized Selected */

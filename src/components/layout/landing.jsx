@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { CSSTransitionGroup } from "react-transition-group";
 import Banner from "../common/banner";
 import Card from "../common/card";
+import QuickLink from "./quickLink";
 
 class Landing extends Component {
   imgIds = [1, 2, 3];
@@ -41,6 +42,30 @@ class Landing extends Component {
     }
   ];
 
+  links = [
+    {
+      id: 1,
+      name: "Google ",
+      url: "https://www.google.com/"
+    },
+    {
+      id: 2,
+      name: "Monash University ",
+      url: "https://www.monash.edu/"
+    }
+  ];
+
+  handleScrollToElement() {
+    var element = document.getElementById("planner-section");
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "nearest"
+      });
+    }
+  }
+
   render() {
     return (
       <React.Fragment>
@@ -59,13 +84,21 @@ class Landing extends Component {
                   >
                     <h1
                       id="homeTitle"
-                      className="col-md-12 display-1 text-white"
+                      className="col-md-12 d-none d-lg-block display-1 text-white"
                     >
                       <strong>Plan Future With Confidence</strong>
                     </h1>
 
-                    <div className="d-flex p-2 justify-content-center mt-3 mb-5">
-                      <button className="btn btn-raised btn-lg btn-info d-flex flex-row justify-content-center ">
+                    <div
+                      className="d-flex p-2 justify-content-center mt-5"
+                      style={{ marginBottom: 10 }}
+                    >
+                      <button
+                        className="btn btn-raised btn-lg btn-info d-flex flex-row justify-content-center "
+                        onClick={() => {
+                          this.handleScrollToElement();
+                        }}
+                      >
                         <span className="mr-3"> Start To Build Your Plan </span>
                         <i className="fas fa-arrow-down" />
                       </button>
@@ -83,36 +116,53 @@ class Landing extends Component {
             <div className="row">
               <div className="col text-center">
                 <div className="container p-3">
-                  <div className="d-flex flex-column">
-                    <h1>Are You Ready To Get Started?</h1>
-                  </div>
-
-                  {/* Square check list*/}
-                  <div id="ready-section ">
-                    <div className="d-flex flex-row justify-content-center">
-                      <div className="p-4 align-self-center">
-                        <i className="fas fa-check fa-2x" />
-                      </div>
-                      <div className="p-4 align-self-end lead">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing
-                      </div>
+                  <div className="d-flex ">
+                    <div className="col-sm-6 mr-5 d-none d-md-block">
+                      <img
+                        src={require(`../../img/planner2.jpg`)}
+                        alt=""
+                        className="img-fluid rounded-circle mr-5"
+                      />
                     </div>
 
-                    <div className="d-flex  flex-row justify-content-center">
-                      <div className="p-4 align-self-center">
-                        <i className="fas fa-check fa-2x " />
-                      </div>
-                      <div className="p-4 align-self-end lead">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing
-                      </div>
-                    </div>
+                    <div className="col-md-6">
+                      <h1>Are You Ready To Get Started?</h1>
+                      {/* Square check list*/}
+                      <div id="ready-section ">
+                        <div className="d-flex flex-row justify-content-stat">
+                          <div className="p-4 align-self-center">
+                            <i className="fas fa-check fa-2x" />
+                          </div>
+                          <div className="p-4 align-self-end lead">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                          </div>
+                        </div>
 
-                    <div className="d-flex  flex-row justify-content-center">
-                      <div className="p-4 align-self-center">
-                        <i className="fas fa-check fa-2x" />
-                      </div>
-                      <div className="p-4 align-self-end lead">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing
+                        <div className="d-flex  flex-row justify-content-center">
+                          <div className="p-4 align-self-center">
+                            <i className="fas fa-check fa-2x " />
+                          </div>
+                          <div className="p-4 align-self-end lead">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                          </div>
+                        </div>
+
+                        <div className="d-flex  flex-row justify-content-center">
+                          <div className="p-4 align-self-center">
+                            <i className="fas fa-check fa-2x" />
+                          </div>
+                          <div className="p-4 align-self-end lead">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                          </div>
+                        </div>
+                        <div className="d-flex  flex-row justify-content-center">
+                          <div className="p-4 align-self-center">
+                            <i className="fas fa-check fa-2x" />
+                          </div>
+                          <div className="p-4 align-self-end lead">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -141,6 +191,12 @@ class Landing extends Component {
         {/* cards */}
         <section id="planner-section">
           <div className="container">
+            <div className="col text-center mb-5 ">
+              <h1 className="display-3">
+                <strong>Start to Build Your Future Plan</strong>
+              </h1>
+            </div>
+
             <div className="row m-2">
               {this.cards.map(card => (
                 <Card
@@ -154,6 +210,17 @@ class Landing extends Component {
                 />
               ))}
             </div>
+          </div>
+        </section>
+
+        {/**quick Link */}
+        <section id="quickLink-section">
+          <div className="container">
+            <QuickLink
+              title="Quick Link Example"
+              links={this.links}
+              className="text-white"
+            />
           </div>
         </section>
       </React.Fragment>

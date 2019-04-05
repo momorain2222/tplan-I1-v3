@@ -1,18 +1,22 @@
 import React, { Component } from "react";
 
-const QuickLink = () => {
+const QuickLink = ({ title, links }) => {
   return (
     <div className="container">
       <div className="row">
-        <difv className="py-4 text-left">
-          <h5>Link Head</h5>
+        <div className="py-4 text-left">
+          <h3>{title}</h3>
 
-          <div className="text-left mb-3">
-            <p>Link 1 </p>
-            <p>Link 1 </p>
-            <p>Link 1 </p>
+          <div className="text-left mb-5 d-flex flex-column">
+            {links.map(link => (
+              <div key={link.id}>
+                <a href={link.url} className="mb-3 text-white">
+                  <p className="display-7">{link.name}</p>
+                </a>
+              </div>
+            ))}
           </div>
-        </difv>
+        </div>
       </div>
     </div>
   );
