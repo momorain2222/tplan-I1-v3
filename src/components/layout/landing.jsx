@@ -9,7 +9,7 @@ class Landing extends Component {
   cards = [
     {
       id: 1,
-      title: "Know Rights",
+      title: "Know Your Rights",
       desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.At, quos.",
       linkPath: "/rightsQuiz",
       linkLabel: "Explore More",
@@ -33,7 +33,7 @@ class Landing extends Component {
     },
     {
       id: 4,
-      title: "Find Affordable Housing",
+      title: "Affordable Housing",
       desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.At, quos.",
       linkPath: "/housing",
       linkLabel: "Explore More",
@@ -77,24 +77,8 @@ class Landing extends Component {
           </div>
         </div>
 
-        <div className="container">
-          <div className="my-5 row">
-            <div className="col-3" />
-            <CSSTransitionGroup
-              transitionName="fade"
-              transitionEnterTimeout={600}
-              transitionLeaveTimeout={500}
-              transitionAppear
-              transitionAppearTimeout={500}
-              className="col d-flex flex-column"
-            >
-              <Card cards={this.cards} />
-            </CSSTransitionGroup>
-          </div>
-        </div>
-
         {/**check list head */}
-        <section id="create-head-section" className="bg-info text-white">
+        <section id="create-head-section" className="">
           <div className="container text-center">
             <div className="row">
               <div className="col text-center">
@@ -134,6 +118,41 @@ class Landing extends Component {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/**middle banner */}
+        <section id="middleBanner">
+          <div className="blue-overlay">
+            <div className="row">
+              <div className="col">
+                <div className="container pt-5">
+                  <div className="d-flex justify-content-center">
+                    {" "}
+                    <h1>See What We Can Do</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* cards */}
+        <section id="planner-section">
+          <div className="container">
+            <div className="row m-2">
+              {this.cards.map(card => (
+                <Card
+                  id={card.id}
+                  title={card.title}
+                  desc={card.desc}
+                  linkPath={card.linkPath}
+                  linkColor={card.linkColor}
+                  linkLabel={card.linkLabel}
+                  key={card.id}
+                />
+              ))}
             </div>
           </div>
         </section>
