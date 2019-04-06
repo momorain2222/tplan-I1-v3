@@ -5,12 +5,17 @@ import HugeSelect from "../common/hugeSelect";
 
 var workbook;
 var activeSheet;
+
 class OccupationContain extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
       containerDiv: <div id="viz1554445704733" />,
-      selectRegion: ""
+      selectRegion: "",
+      activeSheet: {},
+      workbook: {},
+      viz: {}
     };
   }
 
@@ -55,7 +60,7 @@ class OccupationContain extends Component {
       onFirstInteraction: function() {
         console.log("it worked");
         workbook = this.viz.getWorkbook();
-        this.context.activeSheet = workbook.getActiveSheet();
+        activeSheet = workbook.getActiveSheet();
       }
     };
 
