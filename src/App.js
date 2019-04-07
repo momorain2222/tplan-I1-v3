@@ -13,6 +13,8 @@ import CoursesContainer from "./components/courses/coursesContainer";
 import MainFooter from "./components/layout/mainFooter";
 import HousingContain from "./components/housing/housingContain";
 
+import NotFound from "./components/util/notFound";
+
 class App extends Component {
   render() {
     return (
@@ -23,14 +25,13 @@ class App extends Component {
           <Route path="/courses" component={CoursesContainer} />
           <Route path="/occupation" component={OccupationContain} />
           <Route path="/rightsQuiz/:selectItemId" component={QuizStart} />
-          <Route exact path="/" component={Landing} />
+          <Route path="/not-found" component={NotFound} />
           <Route path="/rightsQuiz" component={RightsQuiz} />
-          <Route path="/home" component={Home} />
+          <Route exact path="/" component={Landing} />
           <Redirect from="/rightsQuiz/:selectItemId" to="/rightsQuiz" />
+          <Redirect to="/not-found" />
+          <Redirect from="/" exact to="/" />
         </Switch>
-
-        {/**quick Link */}
-        <MainFooter />
       </div>
     );
   }

@@ -226,6 +226,10 @@ img {
   width: 100%;
 }
 
+#mainFooter {
+  position: relative;
+}
+
 #fixed-bottom-block {
   display: "block";
   padding: "20px";
@@ -250,6 +254,7 @@ img {
 
 #quiz-main-content {
   margin-bottom: 100px;
+  background-color: #fff;
 }
 
 /*bootstrap button customized*/

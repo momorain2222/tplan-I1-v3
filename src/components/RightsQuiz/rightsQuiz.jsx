@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { getCategories } from "./quizCategory";
 import DropdownSelect from "../common/dropDown";
 import Footer from "../layout/footer";
+import MainFooter from "../layout/mainFooter";
 
 class RightsQuiz extends React.Component {
   state = {
@@ -129,6 +130,7 @@ class RightsQuiz extends React.Component {
           </div>
         </div>
         <div id="fixed-bottom-block" />
+        <MainFooter />
       </React.Fragment>
     );
   }

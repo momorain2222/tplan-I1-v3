@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { CSSTransitionGroup } from "react-transition-group";
 import Banner from "../common/banner";
 import Card from "../common/card";
+import MainFooter from "./mainFooter";
 
 class Landing extends Component {
   imgIds = [1, 2, 3];
@@ -240,6 +241,7 @@ class Landing extends Component {
           </div>
         </section>
         <div id="fixed-bottom-block"> </div>
+        <MainFooter />
       </React.Fragment>
     );
   }

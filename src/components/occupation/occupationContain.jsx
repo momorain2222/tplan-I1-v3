@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Tableau } from "tableau-api";
 import HugeSelect from "../common/hugeSelect";
 import StepperUI from "../common/stepper";
+import MainFooter from "../layout/mainFooter";
 
 class OccupationContain extends Component {
   constructor(props) {
@@ -117,11 +118,12 @@ class OccupationContain extends Component {
             </div>
 
             <StepperUI className="mt-1" />
-            <div ref={c => (this.container = c)} />
+            <div ref={c => (this.container = c)} className="mb-4" />
           </div>
         </div>
 
         <div id="fixed-bottom-block" />
+        <MainFooter />
       </section>
     );
   }

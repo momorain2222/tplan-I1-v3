@@ -8,6 +8,7 @@ import QuestionCount from "./questionCount";
 import { getPrograms } from "./resultPgramData";
 import { isEligible } from "../util/validateRights";
 import ProgressBar from "../common/progressBar";
+import MainFooter from "../layout/mainFooter";
 
 //The start of the quiz component
 class QuizStart extends Component {

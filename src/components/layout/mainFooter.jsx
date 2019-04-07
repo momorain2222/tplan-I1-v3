@@ -15,6 +15,7 @@ const MainFooter = () => {
       color="black"
       style={{ margin: "0em 0em 0em", padding: "3em 0em" }}
       vertical
+      id="mainFooter"
     >
       <Container textAlign="center">
         <Grid columns={3} divided stackable>
