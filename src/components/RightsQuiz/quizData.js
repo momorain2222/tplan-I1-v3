@@ -2,7 +2,7 @@ const questions = [
   {
     _id: 1,
     ageGroup: [1, 2, 3, 4],
-    questionContent: `Are you currently under or left OOHC ?`,
+    questionContent: `Are you currently under or left out-of-home care (OOHC) ?`,
     //fact: `The couch started in April of 2017, but a partnership agreement wasn't technically signed until May`,
     choices: [
       {
@@ -39,7 +39,7 @@ const questions = [
   {
     _id: 3,
     ageGroup: [1, 2, 3, 4],
-    questionContent: `Are you an Australian citizen or a PR holder?`,
+    questionContent: `Are you an Australian citizen or a permanent resident (PR) holder??`,
     //fact: `The Couch is currently entirely referral based. Which is great because we don't have time to chase down leads we're busy making the internet ;)`,
     choices: [
       {
@@ -93,7 +93,7 @@ const questions = [
   {
     _id: 6,
     ageGroup: [1, 2, 3, 4],
-    questionContent: `Are you part of NDIS?`,
+    questionContent: `Are you part of National Disability Insurance Scheme (NDIS)?`,
     //fact: `The Couch is currently entirely referral based. Which is great because we don't have time to chase down leads we're busy making the internet ;)`,
     choices: [
       {

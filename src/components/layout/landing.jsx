@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import { CSSTransitionGroup } from "react-transition-group";
 import Banner from "../common/banner";
 import Card from "../common/card";
-import QuickLink from "./quickLink";
-import MainFooter from "./mainFooter";
 
 class Landing extends Component {
   imgIds = [1, 2, 3];
@@ -12,34 +10,46 @@ class Landing extends Component {
     {
       id: 1,
       title: "Know Your Rights",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.At, quos.",
+      desc: "Know all the support you can receive from the government ",
       linkPath: "/rightsQuiz",
       linkLabel: "Explore More",
-      linkColor: "aqua-gradient"
+      linkColor: "aqua-gradient",
+      content: () => {
+        this.handleScrollToTop();
+      }
     },
     {
       id: 2,
       title: "Explore Dream Occupation",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.At, quos.",
+      desc: "Know more about the occupation that you are interested in.",
       linkPath: "/occupation",
       linkLabel: "Explore More",
-      linkColor: "purple-gradient"
+      linkColor: "purple-gradient",
+      content: () => {
+        this.handleScrollToTop();
+      }
     },
     {
       id: 3,
       title: "Find Suitable Courses",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.At, quos.",
+      desc: "Know about subsidized education options available for you",
       linkPath: "/courses",
       linkLabel: "Explore More",
-      linkColor: "peach-gradient "
+      linkColor: "peach-gradient ",
+      content: () => {
+        this.handleScrollToTop();
+      }
     },
     {
       id: 4,
-      title: "Affordable Housing",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.At, quos.",
+      title: "Find Affordable Housing",
+      desc: "Find safe and affordable region for future relocation",
       linkPath: "/housing",
       linkLabel: "Explore More",
-      linkColor: "mean-fruit-gradient"
+      linkColor: "mean-fruit-gradient",
+      content: () => {
+        this.handleScrollToTop();
+      }
     }
   ];
 
@@ -61,6 +71,16 @@ class Landing extends Component {
     if (element) {
       element.scrollIntoView({
         behavior: "smooth",
+        block: "start",
+        inline: "nearest"
+      });
+    }
+  }
+
+  handleScrollToTop() {
+    var element = document.body;
+    if (element) {
+      element.scrollIntoView({
         block: "start",
         inline: "nearest"
       });
@@ -89,6 +109,11 @@ class Landing extends Component {
                     >
                       <strong>Plan Future With Confidence</strong>
                     </h1>
+
+                    <p className="display-6">
+                      Making the transition into adulthood easy for you and get
+                      to know you better
+                    </p>
 
                     <div
                       className="d-flex p-2 justify-content-center mt-5"
@@ -135,16 +160,16 @@ class Landing extends Component {
                             <i className="fas fa-check fa-2x" />
                           </div>
                           <div className="p-4 align-self-end lead">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            50% of these youth DO complete high school
                           </div>
                         </div>
 
-                        <div className="d-flex  flex-row justify-content-center">
+                        <div className="d-flex  flex-row justify-content-start">
                           <div className="p-4 align-self-center">
                             <i className="fas fa-check fa-2x " />
                           </div>
-                          <div className="p-4 align-self-end lead">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                          <div className="p-4 align-self-start lead">
+                            50% ARE able to find steady employment.
                           </div>
                         </div>
 
@@ -152,16 +177,16 @@ class Landing extends Component {
                           <div className="p-4 align-self-center">
                             <i className="fas fa-check fa-2x" />
                           </div>
-                          <div className="p-4 align-self-end lead">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                          <div className="p-4 align-self-start lead">
+                            80% Find stable housing within 2 years of aging out
                           </div>
                         </div>
-                        <div className="d-flex  flex-row justify-content-center">
+                        <div className="d-flex  flex-row justify-content-start">
                           <div className="p-4 align-self-center">
                             <i className="fas fa-check fa-2x" />
                           </div>
-                          <div className="p-4 align-self-end lead">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                          <div className="p-4 align-self-start lead">
+                            30% ARE NOT pregnant by age 21.
                           </div>
                         </div>
                       </div>
@@ -198,7 +223,7 @@ class Landing extends Component {
               </h1>
             </div>
 
-            <div className="row m-2">
+            <div className="row">
               {this.cards.map(card => (
                 <Card
                   id={card.id}
@@ -208,14 +233,13 @@ class Landing extends Component {
                   linkColor={card.linkColor}
                   linkLabel={card.linkLabel}
                   key={card.id}
+                  onPress={card.content}
                 />
               ))}
             </div>
           </div>
         </section>
-
-        {/**quick Link */}
-        <MainFooter />
+        <div id="fixed-bottom-block"> </div>
       </React.Fragment>
     );
   }

@@ -137,6 +137,10 @@
         $("body").bootstrapMaterialDesign();
       });
 
+      $(window).unload(function() {
+        $("body").scrollTop(0);
+      });
+
       $("h1.spacing").on("mouseenter", function() {
         $(this).toggleClass("spaced");
       });

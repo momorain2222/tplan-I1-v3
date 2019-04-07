@@ -25,8 +25,13 @@ class RightsQuiz extends React.Component {
     console.log(e, this.state.selectItemId);
   };
 
+  handleScrollToTop() {
+    window.scrollTo(0, 0);
+  }
+
   //go to the matched quiz questions
   handleStart = () => {
+    this.handleScrollToTop();
     if (this.state.selectItemId === 0) {
       this.setState({ error: true });
       return;
@@ -109,7 +114,7 @@ class RightsQuiz extends React.Component {
                   <button
                     id="quizStartBtn"
                     type="button"
-                    className="btn btn-info col-6-sm mt-5"
+                    className="btn btn-info col-6-sm mt-5 mb-5"
                     style={{ width: 250, height: 70 }}
                     onClick={this.handleStart}
                   >
@@ -124,7 +129,6 @@ class RightsQuiz extends React.Component {
           </div>
         </div>
         <div id="fixed-bottom-block" />
-        <Footer />
       </React.Fragment>
     );
   }

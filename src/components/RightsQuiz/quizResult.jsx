@@ -15,7 +15,7 @@ const QuizResult = ({ result, programs, history }) => {
             <div className="p-4 gradient-card-header cloudy-knoxville-gradient text-dark text-left">
               <p className="mb-0 pb-2 pt-2 display-7 text-center">
                 You can get more information about each right by clicking the
-                name
+                'read more' buttons
               </p>
 
               <div className="card-body card-body-cascade text-center mt-1">

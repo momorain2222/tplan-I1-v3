@@ -1,10 +1,7 @@
 import React, { Component } from "react";
-import Footer from "../layout/footer";
 import { Tableau } from "tableau-api";
 import HugeSelect from "../common/hugeSelect";
-
-var workbook;
-var activeSheet;
+import StepperUI from "../common/stepper";
 
 class OccupationContain extends Component {
   constructor(props) {
@@ -13,8 +10,7 @@ class OccupationContain extends Component {
     this.state = {
       containerDiv: <div id="viz1554445704733" />,
       selectRegion: "",
-      activeSheet: {},
-      workbook: {},
+
       viz: {}
     };
   }
@@ -23,12 +19,12 @@ class OccupationContain extends Component {
     this.initViz();
   }
 
-  regionOptions = [
+  /*   regionOptions = [
     { key: 1, text: "Ballarat", value: "ballarat" },
     { key: 2, text: "Barwon", value: "barwon" }
   ];
-
-  getVizObject() {
+ */
+  /*  getVizObject() {
     var divElement = document.getElementById("viz1554445704733");
     var vizElement = divElement.getElementsByTagName("object")[0];
     vizElement.style.width = "100%";
@@ -36,8 +32,8 @@ class OccupationContain extends Component {
     var scriptElement = document.createElement("script");
     scriptElement.src = "https://public.tableau.com/javascripts/api/viz_v1.js";
     vizElement.parentNode.insertBefore(scriptElement, vizElement);
-  }
-
+  } */
+  /* 
   addValuesToFilter = selectRegion => {
     activeSheet.applyFilterAsync(
       "Employment Region",
@@ -45,23 +41,23 @@ class OccupationContain extends Component {
       this.container.tableau.FilterUpdateType.REPLACE
     );
   };
-
+ */
   initViz() {
     var containerDiv = document.getElementById("tableauPlaceholder");
     //console.log(containerDiv);
     const vizUrl =
-      "https://public.tableau.com/views/Function_1_15544457062700/Dashboard1?:embed=y&:display_count=yes&publish=yes";
+      "https://public.tableau.com/views/iteration17/Dashboard1?:embed=y&:display_count=yes&publish=yes";
 
     var options = {
       //width: "1050px",
       //height: "700px",
       hideTabs: true,
-      hideToolbar: false,
-      onFirstInteraction: function() {
+      hideToolbar: false
+      /* onFirstInteraction: function() {
         console.log("it worked");
         workbook = this.viz.getWorkbook();
         activeSheet = workbook.getActiveSheet();
-      }
+      } */
     };
 
     this.viz = new window.tableau.Viz(this.container, vizUrl, options);
@@ -72,7 +68,7 @@ class OccupationContain extends Component {
     if (value) {
       this.setState({ selectRegion: value });
     }
-    this.addValuesToFilter(value);
+    //this.addValuesToFilter(value);
   };
 
   render() {
@@ -81,16 +77,35 @@ class OccupationContain extends Component {
         <div className="occupation-inner" />
         <div className="container">
           <div className="d-flex flex-column justify-content-center">
-            <div className="text-center mb-5">
+            <div className="text-center mb-2">
               {" "}
-              <h1>Explore the most popular Occupations in Vic</h1>
+              <h1>Explore the most popular Occupations in Victoria</h1>
               <p className="text-left">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Perferendis odit asperiores repellendus nemo id cum nihil, est
-                tempore incidunt corporis error laudantium nobis suscipit
-                aspernatur mollitia blanditiis explicabo aut officiis!
+                From here, you can explore the most popular jobs in the
+                Victoria, Australia. Start your journey from selecting the
+                region, and then interact with the graph to explore your desired
+                occupation's current situation and the growth of specific
+                occupation.
+                {/* <ol>
+                  <li>
+                    <strong>
+                      Step 1 : The size of the bubble indicates the popularity
+                      of major occupation by region :
+                    </strong>{" "}
+                    Click on an occupation to see the further details about it
+                  </li>
+                  <li>
+                    {" "}
+                    <strong>
+                      Step 2 : The size of the bubble indicates the popularity
+                      of major occupation by region :
+                    </strong>{" "}
+                    Click on an occupation to see the further details about it
+                  </li>
+                </ol> */}
               </p>
-              <div className="d-flex flex-column justify-content-center ">
+              <div> </div>
+              {/* <div className="d-flex flex-column justify-content-center ">
                 <label color="cyan">Choose a Region</label>
 
                 <HugeSelect
@@ -98,16 +113,15 @@ class OccupationContain extends Component {
                   placeholder="choose a region"
                   onChange={this.handleSelectChange}
                 />
-              </div>
+              </div> */}
             </div>
 
+            <StepperUI className="mt-1" />
             <div ref={c => (this.container = c)} />
           </div>
         </div>
 
         <div id="fixed-bottom-block" />
-
-        <Footer />
       </section>
     );
   }

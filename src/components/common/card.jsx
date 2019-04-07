@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { CSSTransitionGroup } from "react-transition-group";
 
-const Card = ({ id, title, desc, linkPath, linkColor, linkLabel }) => {
+const Card = ({ id, title, desc, linkPath, linkColor, linkLabel, onPress }) => {
   return (
     <div className="p-4 col-lg">
       <CSSTransitionGroup
@@ -27,6 +27,7 @@ const Card = ({ id, title, desc, linkPath, linkColor, linkLabel }) => {
               <p className="mt-3 display-6">{desc}</p>
               <Link
                 to={`${linkPath}`}
+                onClick={() => onPress()}
                 className={`btn btn-raised ${linkColor} text-white`}
               >
                 {linkLabel}

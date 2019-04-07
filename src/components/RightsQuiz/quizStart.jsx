@@ -145,7 +145,9 @@ class QuizStart extends Component {
     const { length: total } = this.state.quizData;
 
     if (total === 0)
-      return <h1>There are no questions available in the database.</h1>;
+      return (
+        <h1 className="">There are no questions available in the database.</h1>
+      );
 
     console.log("questions length: ", total);
     return (
